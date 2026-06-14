@@ -27,12 +27,12 @@ export default function WorkflowSection() {
             {nodes.map((node, index) => (
               <div
                 key={node}
-                className="relative rounded-2xl border border-border bg-background p-5"
+                className="flex relative rounded-2xl border border-border bg-background p-5"
               >
-                <p className="font-mono text-[0.7rem] uppercase tracking-[0.2em] text-primary">
+                <p className="absolute font-mono text-[0.7rem] uppercase tracking-[0.2em] text-primary">
                   0{index + 1}
                 </p>
-                <h3 className="mt-6 flex flex-col items-center justify-center text-center font-heading text-lg font-bold">
+                <h3 className="flex w-full min-h-[100px] flex-col items-center justify-center text-center font-heading text-lg font-bold">
                   {node}
                 </h3>
                 {index < nodes.length - 1 && (
