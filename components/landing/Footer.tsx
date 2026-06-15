@@ -21,8 +21,8 @@ export default function Footer() {
           </div>
           <p className="mt-3 max-w-xl text-sm text-muted-foreground">
             Smart Treasury is a Stellar-native programmable treasury account for
-            controlled payments, scheduled operations, wallet approvals, and
-            auditable fund movement.
+            controlled payments, scheduled operations, wallet-based approvals,
+            and auditable fund flows.
           </p>
         </div>
         <div className="flex flex-wrap gap-5">
