@@ -1,7 +1,9 @@
 'use client'
 
 import { ArrowRight } from 'lucide-react'
+
 import { APP_URL, DOCS_URL } from '@/lib/links'
+
 import SectionIntro from './SectionIntro'
 
 export default function Vision() {
@@ -19,18 +21,18 @@ export default function Vision() {
         <div className="mt-10 flex flex-col justify-center gap-3 sm:flex-row">
           <a
             href={APP_URL}
-            className="inline-flex items-center justify-center rounded-full bg-primary px-7 py-4 font-semibold text-primary-foreground transition hover:shadow-[0_0_0_4px_hsl(var(--primary)/0.18)]"
+            className="bg-primary text-primary-foreground inline-flex items-center justify-center rounded-full px-7 py-4 font-semibold transition hover:shadow-[0_0_0_4px_hsl(var(--primary)/0.18)]"
           >
             Launch App <ArrowRight className="ml-2 h-4 w-4" />
           </a>
           <a
             href={DOCS_URL}
-            className="inline-flex items-center justify-center rounded-full border border-border bg-background px-7 py-4 font-semibold text-foreground transition hover:border-primary hover:shadow-[0_0_0_4px_hsl(var(--primary)/0.12)]"
+            className="border-border bg-background text-foreground hover:border-primary inline-flex items-center justify-center rounded-full border px-7 py-4 font-semibold transition hover:shadow-[0_0_0_4px_hsl(var(--primary)/0.12)]"
           >
             Read the Docs
           </a>
         </div>
-        <p className="mx-auto mt-10 max-w-3xl text-center text-sm leading-7 text-muted-foreground">
+        <p className="text-muted-foreground mx-auto mt-10 max-w-3xl text-center text-sm leading-7">
           Designed as a non-custodial treasury-control system: Smart Treasury
           provides policy and execution controls, not custody or official
           Stellar endorsement.

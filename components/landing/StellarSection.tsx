@@ -8,10 +8,10 @@ export default function StellarSection() {
   return (
     <section
       id="stellar"
-      className="border-y border-border bg-card/50 py-24 sm:py-32"
+      className="border-border bg-card/50 border-y py-24 sm:py-32"
     >
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
-        <div className="mx-auto mb-8 flex h-20 w-20 items-center justify-center rounded-full border border-border bg-background text-foreground">
+        <div className="border-border bg-background text-foreground mx-auto mb-8 flex h-20 w-20 items-center justify-center rounded-full border">
           <StellarLogo className="h-10 w-10" />
         </div>
         <SectionIntro
@@ -26,17 +26,17 @@ export default function StellarSection() {
           {stellarTools.map(([Icon, title, text]) => (
             <div
               key={title}
-              className="rounded-3xl border border-border bg-background p-6"
+              className="border-border bg-background rounded-3xl border p-6"
             >
-              <Icon className="h-6 w-6 text-primary" />
-              <h3 className="mt-6 font-heading text-lg font-bold">{title}</h3>
-              <p className="mt-3 text-sm leading-6 text-muted-foreground">
+              <Icon className="text-primary h-6 w-6" />
+              <h3 className="font-heading mt-6 text-lg font-bold">{title}</h3>
+              <p className="text-muted-foreground mt-3 text-sm leading-6">
                 {text}
               </p>
             </div>
           ))}
         </div>
-        <p className="mx-auto mt-10 max-w-3xl text-center text-sm leading-7 text-muted-foreground">
+        <p className="text-muted-foreground mx-auto mt-10 max-w-3xl text-center text-sm leading-7">
           Smart Treasury is not presented as official Stellar or SDF
           infrastructure. Stellar is the underlying ecosystem and integration
           layer.

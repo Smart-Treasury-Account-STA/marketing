@@ -1,23 +1,24 @@
 'use client'
 
 import { motion } from 'framer-motion'
+
 import { coreFeatures } from './landingData'
 
 export default function CoreFeatures() {
   return (
     <section
       id="features"
-      className="bg-foreground py-24 text-background sm:py-32"
+      className="bg-foreground text-background py-24 sm:py-32"
     >
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="font-mono text-xs uppercase tracking-[0.28em] text-accent">
+          <p className="text-accent font-mono text-xs tracking-[0.28em] uppercase">
             Core features
           </p>
-          <h2 className="mt-4 font-heading text-3xl font-bold tracking-[-0.02em] text-background sm:text-5xl">
+          <h2 className="font-heading text-background mt-4 text-3xl font-bold tracking-[-0.02em] sm:text-5xl">
             Built for controlled treasury workflows.
           </h2>
-          <p className="mt-5 text-base leading-8 text-background/70 sm:text-lg">
+          <p className="text-background/70 mt-5 text-base leading-8 sm:text-lg">
             Smart Treasury services include policy-controlled payments, weighted
             signer approvals, scheduled treasury operations, revenue split
             support, recovery controls, wallet-first access, and audit-friendly
@@ -32,13 +33,13 @@ export default function CoreFeatures() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.04 }}
-              className="rounded-3xl border border-background/15 bg-background/5 p-7"
+              className="border-background/15 bg-background/5 rounded-3xl border p-7"
             >
-              <Icon className="h-7 w-7 text-accent" />
-              <h3 className="mt-8 font-heading text-xl font-bold tracking-[-0.02em] text-background">
+              <Icon className="text-accent h-7 w-7" />
+              <h3 className="font-heading text-background mt-8 text-xl font-bold tracking-[-0.02em]">
                 {title}
               </h3>
-              <p className="mt-4 leading-7 text-background/70">{text}</p>
+              <p className="text-background/70 mt-4 leading-7">{text}</p>
             </motion.div>
           ))}
         </div>

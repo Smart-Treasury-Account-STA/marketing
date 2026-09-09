@@ -11,7 +11,7 @@ interface SectionIntroProps {
 export default function SectionIntro({
   eyebrow,
   title,
-  children
+  children,
 }: SectionIntroProps) {
   return (
     <motion.div
@@ -21,13 +21,13 @@ export default function SectionIntro({
       transition={{ duration: 0.55 }}
       className="mx-auto max-w-3xl text-center"
     >
-      <p className="font-mono text-xs uppercase tracking-[0.28em] text-primary">
+      <p className="text-primary font-mono text-xs tracking-[0.28em] uppercase">
         {eyebrow}
       </p>
-      <h2 className="mt-4 font-heading text-3xl font-bold tracking-[-0.02em] text-foreground sm:text-5xl">
+      <h2 className="font-heading text-foreground mt-4 text-3xl font-bold tracking-[-0.02em] sm:text-5xl">
         {title}
       </h2>
-      <p className="mt-5 text-base leading-8 text-muted-foreground sm:text-lg">
+      <p className="text-muted-foreground mt-5 text-base leading-8 sm:text-lg">
         {children}
       </p>
     </motion.div>

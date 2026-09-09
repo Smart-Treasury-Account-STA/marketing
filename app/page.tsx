@@ -10,7 +10,7 @@ import WorkflowSection from '@/components/landing/WorkflowSection'
 
 export default function Home() {
   return (
-    <main className="min-h-screen overflow-hidden bg-background text-foreground">
+    <main className="bg-background text-foreground min-h-screen overflow-hidden">
       <SiteNav />
       <Hero />
       <ProductSection />

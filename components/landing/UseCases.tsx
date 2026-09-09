@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+
 import SectionIntro from './SectionIntro'
 import { useCases } from './landingData'
 
@@ -31,22 +32,22 @@ export default function UseCases() {
               </button>
             ))}
           </div>
-          <div className="rounded-[2rem] border border-border bg-card p-7 shadow-sm sm:p-9">
-            <Icon className="h-8 w-8 text-primary" />
-            <h3 className="mt-7 font-heading text-3xl font-bold tracking-[-0.03em]">
+          <div className="border-border bg-card rounded-[2rem] border p-7 shadow-sm sm:p-9">
+            <Icon className="text-primary h-8 w-8" />
+            <h3 className="font-heading mt-7 text-3xl font-bold tracking-[-0.03em]">
               {title}
             </h3>
-            <p className="mt-5 text-lg leading-8 text-muted-foreground">
+            <p className="text-muted-foreground mt-5 text-lg leading-8">
               {text}
             </p>
             <div className="mt-8 space-y-3">
               {bullets.map((item) => (
                 <div
                   key={item}
-                  className="flex items-center justify-between rounded-2xl border border-border bg-background px-5 py-4"
+                  className="border-border bg-background flex items-center justify-between rounded-2xl border px-5 py-4"
                 >
                   <span className="text-sm font-medium">{item}</span>
-                  <span className="font-mono text-xs uppercase tracking-[0.18em] text-primary">
+                  <span className="text-primary font-mono text-xs tracking-[0.18em] uppercase">
                     intent
                   </span>
                 </div>

@@ -7,7 +7,7 @@ const nodes = [
   'Policy checks',
   'Intent registry',
   'Recovery guard',
-  'Audit events'
+  'Audit events',
 ]
 
 export default function WorkflowSection() {
@@ -22,26 +22,26 @@ export default function WorkflowSection() {
           authority, routes actions through policy, intent, and recovery
           controls, and records events for monitoring and audit views.
         </SectionIntro>
-        <div className="mt-16 rounded-[2rem] border border-border bg-card p-5 shadow-sm sm:p-8">
+        <div className="border-border bg-card mt-16 rounded-[2rem] border p-5 shadow-sm sm:p-8">
           <div className="grid gap-4 lg:grid-cols-6">
             {nodes.map((node, index) => (
               <div
                 key={node}
-                className="flex relative rounded-2xl border border-border bg-background p-5"
+                className="border-border bg-background relative flex rounded-2xl border p-5"
               >
-                <p className="absolute font-mono text-[0.7rem] uppercase tracking-[0.2em] text-primary">
+                <p className="text-primary absolute font-mono text-[0.7rem] tracking-[0.2em] uppercase">
                   0{index + 1}
                 </p>
-                <h3 className="flex w-full min-h-[100px] flex-col items-center justify-center text-center font-heading text-lg font-bold">
+                <h3 className="font-heading flex min-h-[100px] w-full flex-col items-center justify-center text-center text-lg font-bold">
                   {node}
                 </h3>
                 {index < nodes.length - 1 && (
-                  <div className="absolute -right-4 top-1/2 hidden h-px w-4 bg-primary lg:block" />
+                  <div className="bg-primary absolute top-1/2 -right-4 hidden h-px w-4 lg:block" />
                 )}
               </div>
             ))}
           </div>
-          <div className="mt-6 rounded-2xl bg-muted p-5 text-sm leading-7 text-muted-foreground">
+          <div className="bg-muted text-muted-foreground mt-6 rounded-2xl p-5 text-sm leading-7">
             No deployment identifiers, function names, transaction hashes, or
             code-level details are shown here — the public view stays focused on
             product flow and operating benefits.

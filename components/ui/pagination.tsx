@@ -1,9 +1,11 @@
 import * as React from 'react'
+
 import {
   ChevronLeftIcon,
   ChevronRightIcon,
-  MoreHorizontalIcon
+  MoreHorizontalIcon,
 } from 'lucide-react'
+
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 
@@ -127,5 +129,5 @@ export {
   PaginationItem,
   PaginationLink,
   PaginationNext,
-  PaginationPrevious
+  PaginationPrevious,
 }

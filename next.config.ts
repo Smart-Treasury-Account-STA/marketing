@@ -32,10 +32,10 @@ const nextConfig: NextConfig = {
         { source: '/app', destination: `${APP_ORIGIN}/app` },
         { source: '/app/:path*', destination: `${APP_ORIGIN}/app/:path*` },
         { source: '/docs', destination: `${DOCS_ORIGIN}/` },
-        { source: '/docs/:path*', destination: `${DOCS_ORIGIN}/:path*` }
-      ]
+        { source: '/docs/:path*', destination: `${DOCS_ORIGIN}/:path*` },
+      ],
     }
-  }
+  },
 }
 
 export default nextConfig
