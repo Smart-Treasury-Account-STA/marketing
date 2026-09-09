@@ -17,12 +17,24 @@ const DOCS_ORIGIN = process.env.DOCS_ORIGIN ?? 'https://sta-docs.vercel.app'
 
 const nextConfig: NextConfig = {
   async rewrites() {
-    return [
-      { source: '/app', destination: `${APP_ORIGIN}/app` },
-      { source: '/app/:path*', destination: `${APP_ORIGIN}/app/:path*` },
-      { source: '/docs', destination: `${DOCS_ORIGIN}/` },
-      { source: '/docs/:path*', destination: `${DOCS_ORIGIN}/:path*` }
-    ]
+    // `beforeFiles` on purpose. On Vercel, a Next.js build emits its own
+    // routing rules for React Server Components requests (`RSC: 1`,
+    // `Next-Router-Prefetch`, `Next-Router-Segment-Prefetch` headers) that
+    // rewrite the path to `<path>.rsc` / `<path>.segments/....segment.rsc`
+    // before `afterFiles` rewrites run. Proxying that mutated path to the
+    // dApp breaks its own RSC routing (root became `/app.rsc`, which the dApp
+    // does not have; segment prefetches got rewritten twice), so `next/link`
+    // prefetches inside the dApp 404'd through this origin. `beforeFiles`
+    // rewrites are compiled ahead of those rules, so the original path and
+    // headers reach the dApp untouched and it resolves RSC requests itself.
+    return {
+      beforeFiles: [
+        { source: '/app', destination: `${APP_ORIGIN}/app` },
+        { source: '/app/:path*', destination: `${APP_ORIGIN}/app/:path*` },
+        { source: '/docs', destination: `${DOCS_ORIGIN}/` },
+        { source: '/docs/:path*', destination: `${DOCS_ORIGIN}/:path*` }
+      ]
+    }
   }
 }
 
