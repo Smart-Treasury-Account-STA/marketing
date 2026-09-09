@@ -1,12 +1,13 @@
 'use client'
-import Link from 'next/link'
+import { APP_URL, DOCS_URL } from '@/lib/links'
 import StellarLogo from './StellarLogo'
 
 const links = [
   ['Product', '#product'],
   ['Use Cases', '#use-cases'],
   ['Stellar Ecosystem', '#stellar'],
-  ['Early Access', '#early-access'],
+  ['Docs', DOCS_URL],
+  ['App', APP_URL],
   ['Contact', 'mailto:hello@smarttreasury.app']
 ]
 
@@ -27,13 +28,13 @@ export default function Footer() {
         </div>
         <div className="flex flex-wrap gap-5">
           {links.map(([label, href]) => (
-            <Link
+            <a
               key={label}
               href={href}
               className="text-sm text-muted-foreground transition hover:text-foreground"
             >
               {label}
-            </Link>
+            </a>
           ))}
         </div>
       </div>

@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
+import { APP_URL } from '@/lib/links'
 
 const links = [
   ['Product', '#product'],
@@ -43,12 +44,12 @@ export default function SiteNav() {
             </Link>
           ))}
         </div>
-        <Link
-          href="#early-access"
+        <a
+          href={APP_URL}
           className="hidden rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm transition hover:shadow-[0_0_0_4px_hsl(var(--primary)/0.18)] md:inline-flex"
         >
-          Join Early Access
-        </Link>
+          Launch App
+        </a>
         <button
           onClick={() => setOpen(!open)}
           className="rounded-full border border-border p-2 md:hidden"
@@ -69,13 +70,12 @@ export default function SiteNav() {
               {label}
             </Link>
           ))}
-          <Link
-            href="#early-access"
-            onClick={() => setOpen(false)}
+          <a
+            href={APP_URL}
             className="mt-3 inline-flex rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground"
           >
-            Join Early Access
-          </Link>
+            Launch App
+          </a>
         </div>
       )}
     </header>

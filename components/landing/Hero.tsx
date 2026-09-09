@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { ArrowRight, CheckCircle2 } from 'lucide-react'
+import { APP_URL } from '@/lib/links'
 import HeroOrb from './HeroOrb'
 import StellarLogo from './StellarLogo'
 import { proofPoints } from './landingData'
@@ -34,12 +35,12 @@ export default function Hero() {
           workflows under predefined onchain rules.
         </p>
         <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-          <Link
-            href="#early-access"
+          <a
+            href={APP_URL}
             className="inline-flex items-center justify-center rounded-full bg-primary px-7 py-4 font-semibold text-primary-foreground transition hover:shadow-[0_0_0_4px_hsl(var(--primary)/0.18)]"
           >
-            Join Early Access <ArrowRight className="ml-2 h-4 w-4" />
-          </Link>
+            Launch App <ArrowRight className="ml-2 h-4 w-4" />
+          </a>
           <Link
             href="#use-cases"
             className="inline-flex items-center justify-center rounded-full border border-border bg-background px-7 py-4 font-semibold text-foreground transition hover:border-primary hover:shadow-[0_0_0_4px_hsl(var(--primary)/0.12)]"
